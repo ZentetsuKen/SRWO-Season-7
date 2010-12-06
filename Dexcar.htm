@@ -1,0 +1,2111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://ez-srwo.appspot.com/game/attack_result -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Super Robot Wars Online (EZ-SRWO)</title>
+        
+        <script type="text/javascript" src="./Dexcar_files/countdown.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Dexcar_files/testcolumn2.css">
+        <!-- <link rel="stylesheet" type="text/css" href="/media/srwo/rwars.css" /> test removing rwars.css to consolidate into one css file -->
+        <link rel="shortcut icon" href="http://www.gt-forum.com/gt-dev/srwo/img/favicon.ico">
+        <script type="text/javascript" src="./Dexcar_files/chrome.js">
+
+            /***********************************************
+             * Chrome CSS Drop Down Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+             * This notice MUST stay intact for legal use
+             * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+             ***********************************************/
+
+        </script>
+
+        <script type="text/javascript" src="./Dexcar_files/prototype.js"></script>
+<script type="text/javascript" src="./Dexcar_files/window.js"></script>
+<link href="./Dexcar_files/default.css" rel="stylesheet" type="text/css">
+<!-- Add this to have a specific theme-->
+<link href="./Dexcar_files/mac_os_x.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="javascript">
+    function show_robot_data_window(robot_id) {
+        url = "/game/window/robot_data/" + robot_id;
+        win = new Window({className: "mac_os_x", title: "Robot data", width:400, height:400, destroyOnClose: true, recenterAuto:false,
+            url: url
+        });
+        win.showCenter();
+    }
+</script>
+
+    </head>
+
+    <body>
+
+        <!--Wrapper for BG left&right -->
+        <div id="wrapper1">	<div id="wrapper2">
+                
+                
+                <!--Menu Bar -->
+<div class="chromestyle" id="chromemenu">
+    <ul>
+        <li><a style="width:0px; padding:5px 0px;"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu1">City &amp; Robot <img src="./Dexcar_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu2">Pilot <img src="./Dexcar_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu3">Warfare <img src="./Dexcar_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu4">Special Actions <img src="./Dexcar_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/ranking">Ranking</a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#">Help</a></li>
+        <li><a href="http://www.gt-forum.com/">Forums</a></li>
+    </ul>
+</div>
+
+<!--1st drop down menu -->
+<div id="dropmenu1" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/unit_overview">Account overview</a>
+    <span class="divider-x"></span>   
+    <a href="http://ez-srwo.appspot.com/game/manage">Manage City</a>
+    <a href="http://ez-srwo.appspot.com/game/boost">Boost</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/robot_detail">Robot details</a>
+    <a href="http://ez-srwo.appspot.com/game/upgrade">Upgrade robot</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/buy_item">Buy items</a>
+    <a href="http://ez-srwo.appspot.com/game/sell_item">Sell items</a>
+</div>
+
+<!--2nd drop down menu -->
+<div id="dropmenu2" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/view_pilot">My Pilot</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/pilot_center">Pilot center</a>
+    <a href="http://ez-srwo.appspot.com/game/list_absent_pilots">Incoming Pilots</a>
+    <a href="http://ez-srwo.appspot.com/game/list_working_pilots">Working Pilots</a>
+</div>
+
+<!--3th drop down menu -->
+<div id="dropmenu3" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/check_battle_history">Check battle histories</a>
+    <a href="http://ez-srwo.appspot.com/game/new_ranking">Filtered ranking (still experimental)</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/defense_plan_mapping">Defense plans</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/new_set_attack_plan">Set attack plan</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/attack_ranking">Attack</a>
+    <span class="divider-x"></span>
+    <strong><a href="http://ez-srwo.appspot.com/game/counter_ranking">Counter attack</a></strong>
+</div>
+
+<!--4th drop down menu -->
+<div id="dropmenu4" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/logout_submit">Log out</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/delete_unit">Destroy your unit</a>
+    <a href="http://ez-srwo.appspot.com/game/change_password">Change password</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/donate">Donate</a>
+</div>
+
+<script type="text/javascript">
+    cssdropdown.startchrome("chromemenu")
+</script>
+
+                
+                
+
+                <div id="main">
+                    <!--Start Main Contents -->
+                    
+
+
+
+                    
+<table class="battle1">
+    <tbody><tr>
+        
+        <td>
+            <center>
+                <h3>iZen</h3>
+                <h3>AltEisen</h3>
+            </center>
+            
+            
+            <p><img src="./Dexcar_files/AltEisen.jpg"></p>
+            
+
+
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="109" height="10"><img src="./Dexcar_files/hp_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        17865 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+
+
+        </td>
+        
+        <td>
+            <center>
+                <h3>Dexcar</h3>
+                <h3>Grendizer</h3>
+            </center>
+            
+            <p><img src="./Dexcar_files/Grendizer-1.jpg"></p>
+            
+            
+
+
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="109" height="10"><img src="./Dexcar_files/hp_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        37206 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+
+
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <table class="block1">
+                <tbody><tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Damage</th>
+                    <th>Morale</th>
+                    <th>EN</th>
+                    <th>Ammo</th>
+                    <th>Acc</th>
+                    <th>Cri</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Trump Card</td>
+                    <td>7792</td>
+                    <td>130</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>55</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Square Claymore</td>
+                    <td>4971</td>
+                    <td>110</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>50</td>
+                    <td>60</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Revolving Stake</td>
+                    <td>4539</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>45</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Heat Horn</td>
+                    <td>1047</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>999</td>
+                    <td>30</td>
+                    <td>30</td>
+                </tr>
+                
+            </tbody></table>
+        </td>
+        
+        <td>
+            <table class="block1">
+                <tbody><tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Damage</th>
+                    <th>Morale</th>
+                    <th>EN</th>
+                    <th>Ammo</th>
+                    <th>Acc</th>
+                    <th>Cri</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Double Harken</td>
+                    <td>2923</td>
+                    <td>0</td>
+                    <td>50</td>
+                    <td>999</td>
+                    <td>20</td>
+                    <td>6.15</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Hand Beam</td>
+                    <td>2376</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>999</td>
+                    <td>10</td>
+                    <td>26.15</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Screw Crasher Punch</td>
+                    <td>1879</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>-5</td>
+                    <td>26.15</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Dexcar_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Space Thunder</td>
+                    <td>1649</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>999</td>
+                    <td>15</td>
+                    <td>31.15</td>
+                </tr>
+                
+            </tbody></table>
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <center>
+                
+                
+                <div>1 x Miracle at turn 1</div>
+                
+                <div>1 x Charge at turn 1</div>
+                
+                <div>1 x Sharp at turn 1</div>
+                
+                
+            </center>
+        </td>
+        
+        <td>
+            <center>
+                
+                
+                <div>1 x Wall at turn 3</div>
+                
+                <div>1 x Wall at turn 5</div>
+                
+                <div>1 x Wall at turn 1</div>
+                
+                <div>1 x Wall at turn 7</div>
+                
+                <div>1 x Sharp at turn 9</div>
+                
+                
+            </center>
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <center>
+                
+                
+                
+            </center>
+        </td>
+        
+        <td>
+            <center>
+                
+                <p>
+                    
+                    Pilot  : Maria Grace Fleed</p>
+                
+                
+                
+            </center>
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <h4>Active pilot skills</h4>
+            
+            None
+            
+        </td>
+        
+        <td>
+            <h4>Active pilot skills</h4>
+            
+            
+            <div>Attack (lv. 2)</div>
+            
+            <div>Defense (lv. 2)</div>
+            
+            
+        </td>
+        
+    </tr>
+</tbody></table>
+
+<!-- Start Battle part -->
+<table class="battle2">
+    
+
+
+    <tbody><tr>
+        <th colspan="2">
+            
+            <b>Turn 1</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Miracle</div>
+            
+            <div class="display_spiritual_skill">1 x Charge</div>
+            
+            <div class="display_spiritual_skill">1 x Sharp</div>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 130</p></td>
+			
+        <td><p>Morale: 100</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 244.7 (random 12.8953156913)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> -179.2 (random 53.5900115211)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 2 (random 63.507497094)
+            
+					
+            <br><font color="CornflowerBlue"><b> Perfect Defense! </b></font>
+					
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Trump Card deals 4356 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="109" height="10"><img src="./Dexcar_files/hp_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        17865 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="97" height="10"><img src="./Dexcar_files/hp_no.png" width="13" height="10"></nobr>
+                </td>
+                <td>
+                        32850 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 2</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Miracle</div>
+            
+            <div class="display_spiritual_skill">1 x Charge</div>
+            
+            <div class="display_spiritual_skill">1 x Sharp</div>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 161</p></td>
+			
+        <td><p>Morale: 100</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 244.7 (random 50.10576165)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> -179.2 (random 78.4400929531)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 2 (random 47.030944362)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Trump Card deals 8749 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="109" height="10"><img src="./Dexcar_files/hp_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        17865 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="71" height="10"><img src="./Dexcar_files/hp_no.png" width="39" height="10"></nobr>
+                </td>
+                <td>
+                        24101 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 3</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 162</p></td>
+			
+        <td><p>Morale: 100</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 104.7 (random 68.9884161688)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 6.44678168018)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 60 (random 46.2681475826)
+            
+            <font color="#ff3333"><b> Critical Hit! </b></font>
+       	            
+					
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 67.2654480082)
+            
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Square Claymore deals 1222 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 2056 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="97" height="10"><img src="./Dexcar_files/hp_no.png" width="13" height="10"></nobr>
+                </td>
+                <td>
+                        15809 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="67" height="10"><img src="./Dexcar_files/hp_no.png" width="43" height="10"></nobr>
+                </td>
+                <td>
+                        22879 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 4</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 164</p></td>
+			
+        <td><p>Morale: 101</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 104.7 (random 71.1839488596)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 80.1833254474)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 60 (random 5.68312146635)
+            
+            <font color="#ff3333"><b> Critical Hit! </b></font>
+       	            
+					
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Square Claymore deals 1242 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="97" height="10"><img src="./Dexcar_files/hp_no.png" width="13" height="10"></nobr>
+                </td>
+                <td>
+                        15809 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="63" height="10"><img src="./Dexcar_files/hp_no.png" width="47" height="10"></nobr>
+                </td>
+                <td>
+                        21637 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 5</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 166</p></td>
+			
+        <td><p>Morale: 101</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 104.7 (random 33.1415940878)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 38.9491175902)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 60 (random 54.2524851077)
+            
+            <font color="#ff3333"><b> Critical Hit! </b></font>
+       	            
+					
+            <br><font color="CornflowerBlue"><b> Perfect Defense! </b></font>
+					
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 61.9839955954)
+            
+					
+            <br><font color="CornflowerBlue"><b> Perfect Defense! </b></font>
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Square Claymore deals 100 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 1741 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="86" height="10"><img src="./Dexcar_files/hp_no.png" width="24" height="10"></nobr>
+                </td>
+                <td>
+                        14068 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="63" height="10"><img src="./Dexcar_files/hp_no.png" width="47" height="10"></nobr>
+                </td>
+                <td>
+                        21537 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 6</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 168</p></td>
+			
+        <td><p>Morale: 102</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 104.7 (random 20.9988577466)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 99.6749783668)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 60 (random 89.7060223473)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Square Claymore deals 100 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="86" height="10"><img src="./Dexcar_files/hp_no.png" width="24" height="10"></nobr>
+                </td>
+                <td>
+                        14068 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="63" height="10"><img src="./Dexcar_files/hp_no.png" width="47" height="10"></nobr>
+                </td>
+                <td>
+                        21437 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 7</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 169</p></td>
+			
+        <td><p>Morale: 102</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 64.7 (random 66.8532982919)
+                       	
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 49.8213394743)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 15.9062334368)
+            
+            <font color="#ff3333"><b> Critical Hit! </b></font>
+       	            
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 4452 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="59" height="10"><img src="./Dexcar_files/hp_no.png" width="51" height="10"></nobr>
+                </td>
+                <td>
+                        9616 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="63" height="10"><img src="./Dexcar_files/hp_no.png" width="47" height="10"></nobr>
+                </td>
+                <td>
+                        21437 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 8</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Wall</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 169</p></td>
+			
+        <td><p>Morale: 104</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 64.7 (random 46.9746667789)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 29.361863867)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 45 (random 69.950953044)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 78.3728766169)
+            
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Revolving Stake deals 100 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 2075 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="46" height="10"><img src="./Dexcar_files/hp_no.png" width="64" height="10"></nobr>
+                </td>
+                <td>
+                        7541 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="63" height="10"><img src="./Dexcar_files/hp_no.png" width="47" height="10"></nobr>
+                </td>
+                <td>
+                        21337 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 9</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Sharp</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 170</p></td>
+			
+        <td><p>Morale: 105</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 34.7 (random 47.1112245669)
+                       	
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 80.8 (random 95.8939072025)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="46" height="10"><img src="./Dexcar_files/hp_no.png" width="64" height="10"></nobr>
+                </td>
+                <td>
+                        7541 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="63" height="10"><img src="./Dexcar_files/hp_no.png" width="47" height="10"></nobr>
+                </td>
+                <td>
+                        21337 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 10</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Sharp</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 170</p></td>
+			
+        <td><p>Morale: 105</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 34.7 (random 17.8472502933)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 80.8 (random 20.5673161766)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 45 (random 59.9810253935)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 33.7559937854)
+            
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Revolving Stake deals 810 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 2080 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="33" height="10"><img src="./Dexcar_files/hp_no.png" width="77" height="10"></nobr>
+                </td>
+                <td>
+                        5461 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="60" height="10"><img src="./Dexcar_files/hp_no.png" width="50" height="10"></nobr>
+                </td>
+                <td>
+                        20527 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 11</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 171</p></td>
+			
+        <td><p>Morale: 106</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 64.7 (random 26.4666594409)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 27.4714507883)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 45 (random 30.6416697375)
+            
+            <font color="#ff3333"><b> Critical Hit! </b></font>
+       	            
+					
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 55.6549544)
+            
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Revolving Stake deals 6003 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 2085 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="20" height="10"><img src="./Dexcar_files/hp_no.png" width="90" height="10"></nobr>
+                </td>
+                <td>
+                        3376 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="42" height="10"><img src="./Dexcar_files/hp_no.png" width="68" height="10"></nobr>
+                </td>
+                <td>
+                        14524 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 12</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 173</p></td>
+			
+        <td><p>Morale: 107</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 64.7 (random 81.2272991735)
+                       	
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 18.4365329519)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 68.9274953739)
+            
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 2089 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="7" height="10"><img src="./Dexcar_files/hp_no.png" width="103" height="10"></nobr>
+                </td>
+                <td>
+                        1287 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="42" height="10"><img src="./Dexcar_files/hp_no.png" width="68" height="10"></nobr>
+                </td>
+                <td>
+                        14524 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 13</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+        </td>
+			
+        <td>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 173</p></td>
+			
+        <td><p>Morale: 108</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 84.7 (random 32.7335311955)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> 50.8 (random 11.9413475273)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 30 (random 41.075546015)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+            <b>Critical:</b> 26.15 (random 83.7338257745)
+            
+					
+            <br><font color="CornflowerBlue"><b> Perfect Defense! </b></font>
+					
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Heat Horn deals 100 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+            <b>Hand Beam deals 1774 damage!</b>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="1" height="10"><img src="./Dexcar_files/hp_no.png" width="109" height="10"></nobr>
+                </td>
+                <td>
+                        0 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="109" height="10"><img src="./Dexcar_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/hp.png" width="42" height="10"><img src="./Dexcar_files/hp_no.png" width="68" height="10"></nobr>
+                </td>
+                <td>
+                        14424 / 37206 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Dexcar_files/en.png" width="26" height="10"><img src="./Dexcar_files/en_no.png" width="84" height="10"></nobr>
+                </td>
+                <td>
+                        43 / 180 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+</tbody></table>
+
+
+<!-- Results part -->
+
+
+
+
+
+<div>
+    <h4>You lose!</h4>
+    <p>Get 89 EXP</p>
+    
+</div>
+
+
+                    <!--End Main Contents -->
+                </div>
+            </div>
+        </div>
+
+        <!-- BEGIN Google Analytics -->
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="./Dexcar_files/ga.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-1842846-9");
+                pageTracker._trackPageview();
+            } catch(err) {}</script>
+        <!-- END Google Analytics -->
+
+    
+</body></html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://ez-srwo.appspot.com/game/attack_result -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Super Robot Wars Online (EZ-SRWO)</title>
+        
+        <script type="text/javascript" src="./Tum006_files/countdown.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Tum006_files/testcolumn2.css">
+        <!-- <link rel="stylesheet" type="text/css" href="/media/srwo/rwars.css" /> test removing rwars.css to consolidate into one css file -->
+        <link rel="shortcut icon" href="http://www.gt-forum.com/gt-dev/srwo/img/favicon.ico">
+        <script type="text/javascript" src="./Tum006_files/chrome.js">
+
+            /***********************************************
+             * Chrome CSS Drop Down Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+             * This notice MUST stay intact for legal use
+             * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+             ***********************************************/
+
+        </script>
+
+        <script type="text/javascript" src="./Tum006_files/prototype.js"></script>
+<script type="text/javascript" src="./Tum006_files/window.js"></script>
+<link href="./Tum006_files/default.css" rel="stylesheet" type="text/css">
+<!-- Add this to have a specific theme-->
+<link href="./Tum006_files/mac_os_x.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="javascript">
+    function show_robot_data_window(robot_id) {
+        url = "/game/window/robot_data/" + robot_id;
+        win = new Window({className: "mac_os_x", title: "Robot data", width:400, height:400, destroyOnClose: true, recenterAuto:false,
+            url: url
+        });
+        win.showCenter();
+    }
+</script>
+
+    </head>
+
+    <body>
+
+        <!--Wrapper for BG left&right -->
+        <div id="wrapper1">	<div id="wrapper2">
+                
+                
+                <!--Menu Bar -->
+<div class="chromestyle" id="chromemenu">
+    <ul>
+        <li><a style="width:0px; padding:5px 0px;"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu1">City &amp; Robot <img src="./Tum006_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu2">Pilot <img src="./Tum006_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu3">Warfare <img src="./Tum006_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#" rel="dropmenu4">Special Actions <img src="./Tum006_files/down.gif" border="0"></a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/ranking">Ranking</a></li>
+        <li><a href="http://ez-srwo.appspot.com/game/attack_result#">Help</a></li>
+        <li><a href="http://www.gt-forum.com/">Forums</a></li>
+    </ul>
+</div>
+
+<!--1st drop down menu -->
+<div id="dropmenu1" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/unit_overview">Account overview</a>
+    <span class="divider-x"></span>   
+    <a href="http://ez-srwo.appspot.com/game/manage">Manage City</a>
+    <a href="http://ez-srwo.appspot.com/game/boost">Boost</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/robot_detail">Robot details</a>
+    <a href="http://ez-srwo.appspot.com/game/upgrade">Upgrade robot</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/buy_item">Buy items</a>
+    <a href="http://ez-srwo.appspot.com/game/sell_item">Sell items</a>
+</div>
+
+<!--2nd drop down menu -->
+<div id="dropmenu2" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/view_pilot">My Pilot</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/pilot_center">Pilot center</a>
+    <a href="http://ez-srwo.appspot.com/game/list_absent_pilots">Incoming Pilots</a>
+    <a href="http://ez-srwo.appspot.com/game/list_working_pilots">Working Pilots</a>
+</div>
+
+<!--3th drop down menu -->
+<div id="dropmenu3" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/check_battle_history">Check battle histories</a>
+    <a href="http://ez-srwo.appspot.com/game/new_ranking">Filtered ranking (still experimental)</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/defense_plan_mapping">Defense plans</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/new_set_attack_plan">Set attack plan</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/attack_ranking">Attack</a>
+    <span class="divider-x"></span>
+    <strong><a href="http://ez-srwo.appspot.com/game/counter_ranking">Counter attack</a></strong>
+</div>
+
+<!--4th drop down menu -->
+<div id="dropmenu4" class="dropmenudiv">
+    <a href="http://ez-srwo.appspot.com/game/logout_submit">Log out</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/delete_unit">Destroy your unit</a>
+    <a href="http://ez-srwo.appspot.com/game/change_password">Change password</a>
+    <span class="divider-x"></span>
+    <a href="http://ez-srwo.appspot.com/game/donate">Donate</a>
+</div>
+
+<script type="text/javascript">
+    cssdropdown.startchrome("chromemenu")
+</script>
+
+                
+                
+
+                <div id="main">
+                    <!--Start Main Contents -->
+                    
+
+
+
+                    
+<table class="battle1">
+    <tbody><tr>
+        
+        <td>
+            <center>
+                <h3>iZen</h3>
+                <h3>AltEisen</h3>
+            </center>
+            
+            
+            <p><img src="./Tum006_files/AltEisen.jpg"></p>
+            
+
+
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Tum006_files/hp.png" width="52" height="10"><img src="./Tum006_files/hp_no.png" width="58" height="10"></nobr>
+                </td>
+                <td>
+                        8554 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Tum006_files/en.png" width="109" height="10"><img src="./Tum006_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+
+
+        </td>
+        
+        <td>
+            <center>
+                <h3>Tum006</h3>
+                <h3>Cybaster</h3>
+            </center>
+            
+            <p><img src="./Tum006_files/Cybaster.jpg"></p>
+            
+            
+
+
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Tum006_files/hp.png" width="109" height="10"><img src="./Tum006_files/hp_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        43513 / 43513 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Tum006_files/en.png" width="109" height="10"><img src="./Tum006_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        200 / 200 EN
+                </td>
+        </tr>
+</tbody></table>
+
+
+
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <table class="block1">
+                <tbody><tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Damage</th>
+                    <th>Morale</th>
+                    <th>EN</th>
+                    <th>Ammo</th>
+                    <th>Acc</th>
+                    <th>Cri</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Tum006_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Trump Card</td>
+                    <td>9069</td>
+                    <td>130</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>55</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Tum006_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Square Claymore</td>
+                    <td>5125</td>
+                    <td>110</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>50</td>
+                    <td>60</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Tum006_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Revolving Stake</td>
+                    <td>4680</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>45</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Tum006_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Heat Horn</td>
+                    <td>1080</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>999</td>
+                    <td>30</td>
+                    <td>30</td>
+                </tr>
+                
+            </tbody></table>
+        </td>
+        
+        <td>
+            <table class="block1">
+                <tbody><tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Damage</th>
+                    <th>Morale</th>
+                    <th>EN</th>
+                    <th>Ammo</th>
+                    <th>Acc</th>
+                    <th>Cri</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        
+                        <img src="./Tum006_files/far.gif">
+                        
+                    </td>
+                    <td>Cosmo Nova</td>
+                    <td>4280</td>
+                    <td>130</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>40</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Tum006_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Discutter</td>
+                    <td>3490</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>999</td>
+                    <td>5</td>
+                    <td>30</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        <img src="./Tum006_files/clo.gif">
+                        
+                        
+                    </td>
+                    <td>Akashic Buster</td>
+                    <td>2970</td>
+                    <td>120</td>
+                    <td>40</td>
+                    <td>999</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        
+                        
+                        <img src="./Tum006_files/far.gif">
+                        
+                    </td>
+                    <td>High Familiar</td>
+                    <td>2000</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>18</td>
+                    <td>30</td>
+                </tr>
+                
+            </tbody></table>
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <center>
+                
+                
+                <div>1 x Miracle at turn 1</div>
+                
+                <div>2 x Charge at turn 1</div>
+                
+                <div>1 x Sharp at turn 1</div>
+                
+                
+            </center>
+        </td>
+        
+        <td>
+            <center>
+                
+                
+                <div>2 x Flash at turn 1</div>
+                
+                <div>1 x Flash at turn 3</div>
+                
+                <div>1 x Flash at turn 5</div>
+                
+                <div>1 x Flash at turn 7</div>
+                
+                <div>1 x Flash at turn 9</div>
+                
+                <div>1 x Sharp at turn 11</div>
+                
+                <div>1 x Sharp at turn 13</div>
+                
+                <div>1 x Sharp at turn 15</div>
+                
+                <div>1 x Sharp at turn 17</div>
+                
+                
+            </center>
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <center>
+                
+                
+                
+            </center>
+        </td>
+        
+        <td>
+            <center>
+                
+                
+                
+            </center>
+        </td>
+        
+    </tr>
+    <tr>
+        
+        <td>
+            <h4>Active pilot skills</h4>
+            
+            None
+            
+        </td>
+        
+        <td>
+            <h4>Active pilot skills</h4>
+            
+            None
+            
+        </td>
+        
+    </tr>
+</tbody></table>
+
+<!-- Start Battle part -->
+<table class="battle2">
+    
+
+
+    <tbody><tr>
+        <th colspan="2">
+            
+            <b>Turn 1</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Miracle</div>
+            
+            <div class="display_spiritual_skill">2 x Charge</div>
+            
+            <div class="display_spiritual_skill">1 x Sharp</div>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">2 x Flash</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 130</p></td>
+			
+        <td><p>Morale: 100</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 95.0 (random 20.9401709313)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> -250.0 (random 27.2166467503)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 2 (random 39.5185727326)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Trump Card deals 26899 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Tum006_files/hp.png" width="52" height="10"><img src="./Tum006_files/hp_no.png" width="58" height="10"></nobr>
+                </td>
+                <td>
+                        8554 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Tum006_files/en.png" width="109" height="10"><img src="./Tum006_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Tum006_files/hp.png" width="41" height="10"><img src="./Tum006_files/hp_no.png" width="69" height="10"></nobr>
+                </td>
+                <td>
+                        16614 / 43513 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Tum006_files/en.png" width="109" height="10"><img src="./Tum006_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        200 / 200 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+
+
+    <tr>
+        <th colspan="2">
+            
+            <b>Turn 2</b>
+        </th>
+    </tr>
+    <tr>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">1 x Miracle</div>
+            
+            <div class="display_spiritual_skill">2 x Charge</div>
+            
+            <div class="display_spiritual_skill">1 x Sharp</div>
+            
+        </td>
+			
+        <td>
+            
+            <div class="display_spiritual_skill">2 x Flash</div>
+            
+        </td>
+			
+    </tr>
+    <tr valign="top">
+           	
+        <td><p>Morale: 161</p></td>
+			
+        <td><p>Morale: 100</p></td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            <b>Accuracy:</b> 95.0 (random 42.1864847494)
+                       	
+            <font color="Khaki"><b>Hit!</b></font>
+	                
+        </td>
+		
+        <td>
+            <b>Accuracy:</b> -250.0 (random 29.1139878541)
+                       	
+        </td>
+		
+    </tr>
+    <tr>
+			
+        <td>
+					
+            <b>Critical:</b> 2 (random 16.0207834576)
+            
+					
+					
+        </td>
+			
+        <td>
+					
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+				
+            <b>Trump Card deals 28586 damage!</b>
+				
+        </td>
+			
+        <td>
+				
+        </td>
+			
+    </tr>
+    <tr>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Tum006_files/hp.png" width="52" height="10"><img src="./Tum006_files/hp_no.png" width="58" height="10"></nobr>
+                </td>
+                <td>
+                        8554 / 17900 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Tum006_files/en.png" width="109" height="10"><img src="./Tum006_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        100 / 100 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+        <td>
+            
+<table>
+        <tbody><tr>
+                <td>
+                        <nobr><img src="./Tum006_files/hp.png" width="1" height="10"><img src="./Tum006_files/hp_no.png" width="109" height="10"></nobr>
+                </td>
+                <td>
+                        0 / 43513 HP
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <nobr><img src="./Tum006_files/en.png" width="109" height="10"><img src="./Tum006_files/en_no.png" width="1" height="10"></nobr>
+                </td>
+                <td>
+                        200 / 200 EN
+                </td>
+        </tr>
+</tbody></table>
+
+        </td>
+			
+    </tr>
+	
+</tbody></table>
+
+
+<!-- Results part -->
+
+<div>
+    <h4>You Win!</h4>
+    <p>Get 271 acres of land <br>
+			Get 376 EXP</p>
+    
+
+    <!--
+                proper room gain 270.13
+
+                old total room 2270
+                attacker_room_gain_rate 0.119
+                defender_extra_room_lose_rate 1
+                defender_final_room_lose_rate 0.119
+                proper room loss 270.13
+                total_room loss 271
+                defender_end_total_room 1999
+    -->
+
+</div>
+
+
+
+
+
+
+                    <!--End Main Contents -->
+                </div>
+            </div>
+        </div>
+
+        <!-- BEGIN Google Analytics -->
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="./Tum006_files/ga.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-1842846-9");
+                pageTracker._trackPageview();
+            } catch(err) {}</script>
+        <!-- END Google Analytics -->
+
+    
+</body></html>

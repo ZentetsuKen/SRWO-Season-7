@@ -1,0 +1,391 @@
+/* Body, Main Content Area */
+
+	html, body {
+		height: 100%;
+		margin:0; Padding: 0;
+		}
+	
+	body{
+		margin-top: 5px;
+		margin-left: -3px;
+		background: black;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
+		font-size:medium;
+		color:white;
+		min-height:100%;
+		}
+
+		
+		
+	a {color:Orange;}
+	a:hover {color: #FFC966;}
+
+	h1  {
+		line-height: 15px;
+		}
+		
+	h2	{
+		line-height: 8px;
+		}
+
+
+	h4 {
+		font-size:medium; 
+		font-weight:bold;
+		color: #FF9900;
+		}
+
+
+/* Wrapper (for left and right bg)*/
+
+
+	#wrapper1{
+		position:relative;
+		margin: auto ; padding: auto;
+		width:100%;
+		min-height:100%;
+		height:auto;
+		background:url(http://www.gt-forum.com/gt-dev/srwo/img/left_logo2.jpg) fixed bottom left no-repeat;
+		}
+
+	#wrapper2{
+		position:relative;
+		margin: auto ; padding: auto;
+		width:100%;
+		min-height:100%;
+		height:auto;
+		background:url(http://www.gt-forum.com/gt-dev/srwo/img/right_logo2.jpg) fixed bottom right no-repeat;
+		}
+
+	#main{
+		position:relative;
+		width:775px;
+		height:auto; !important;
+		min-height:720px;
+		text-align:center;
+		margin-top: 20px;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 30px;
+		}
+
+/*Menu Bar*/
+
+		.chromestyle{
+		width: 99.7%;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: normal;
+		font-size: 13px;
+		white-space: normal;
+		}
+		
+		.chromestyle:after{ /*Add margin between menu and rest of content in Firefox*/
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden;
+		}
+		
+		.chromestyle ul{
+		display:table; /* This is used for firefox  to avoid the horizontal whitespace bug */
+		border-left: 1px solid #335;
+		border-right: 1px solid #335;
+		border-top: 2px solid #222;
+		border-bottom: 2px solid #111;
+		height: 17px;
+		width: 100%; 
+		background: url(http://www.gt-forum.com/gt-dev/srwo/img/mattebg-2.gif) center center repeat-x; /*THEME CHANGE HERE*/
+		padding: 5px 0px;
+		margin: 0;
+		text-align: center; /*set value to "left", "center", or "right"*/
+		}
+		
+		.chromestyle ul li{
+		display: inline;
+		}
+		
+		.chromestyle ul li a{
+		color: #bbc;
+		padding: 5px 10px;
+		text-decoration: none;
+		border-right: 1px solid #667;
+		
+		}
+		
+		.chromestyle ul li a:hover, .chromestyle ul li a.selected{ /*script dynamically adds a class of "selected" to the current active menu item*/
+				background: url(http://www.gt-forum.com/gt-dev/srwo/img/mattebg2.gif) center center repeat-x; /*THEME CHANGE HERE*/ 
+				color:#1f1d86;
+				text-decoration:none;
+				font-weight:normal;
+		}
+		
+		
+		/* ######### Style for Drop Down Menu ######### */
+		
+			.dropmenudiv{
+			position:absolute;
+			top: 0;
+			margin-top: 2px; /*change here if there's space between bar and drop-down*/
+			margin-left: 3px; /*change here if the drop-down is "indented" */
+			border: 10px solid #ffffff /*THEME CHANGE HERE*/
+			border-bottom-width: 0px; 
+			font:normal 12px Arial;
+			padding: 10px;
+			line-height:18px;
+			z-index:999;
+			background-color: #232244;
+			width: 200px;
+			visibility: hidden; 
+			 /* change opacity below */
+			filter:alpha(opacity=90);
+			-moz-opacity:0.9;
+			-khtml-opacity: 0.9;
+			opacity: 0.9;
+			}
+			
+			
+			.dropmenudiv a{
+			margin: auto;
+			display: inline-block;
+			text-indent: 3px; 
+			font: normal 12px Arial;
+			border-bottom: 0px solid #BABDCB; /*THEME CHANGE HERE*/
+			border-top: 0px solid #AAA;
+			text-decoration: none;
+			line-height:20px;
+			color: #D5D9E5;
+			}
+			
+			.dropmenudiv a{
+			display: block;
+			}
+			
+			* html .dropmenudiv a{ /*IE only hack*/
+			width: 100%;
+			}
+			
+			.dropmenudiv a:hover{ /*THEME CHANGE HERE*/
+			background-color:#C3D2E3;
+					color:#4A60B2;
+					text-decoration:none;
+					font-weight:normal;
+			}
+			
+			.qmdivider
+				{display:block;font-size:1px;border-width:0px;border-style:solid;position:relative;z-index:1;}
+			
+			.divider-x
+				{	
+					display:block;font-size:1px;border-width:0px;border-style:solid;position:relative;z-index:1;
+					border-top-width:1px;
+					margin:5px 2px 5px 2px;
+					/* border-color:#BABED9; */
+					/*border-color:#7A7E95; */
+					border-color: #3d4572;
+				}
+
+/* Tables */
+	table {margin-left: auto; margin-right: auto; padding: 5px 0px;}    
+	td {padding: 3px 5px; text-align: left; font-size: small;}
+	th {font-size: small; text-align: center; padding: 3px 10px;}
+	.block1 td {
+		background-color: #333; text-align: left; font-size: small;
+		border-top: solid 1px #3A3A3A; border-bottom: solid 1px #2A2A2A; border-left: solid 1px #2A2A2A; border-right: solid 1px #2A2A2A;
+		}
+	.defblock1 {width: 100%;}
+		.defblock1 th
+			{
+			background: #2A2A2A url('http://www.gt-forum.com/gt-dev/srwo/img/def1.png') no-repeat bottom right;
+			text-align: left; font-size: small; font-weight: normal; padding: 5px 10px; 
+			border-top: solid 1px #2F2F2F; border-bottom: solid 1px #222; border-left: solid 1px #222; border-right: solid 1px #222;
+			}
+		.defblock1 td 
+			{
+			background-color: #333; text-align: left; font-size: small; padding: 5px 10px;
+			border-top: solid 1px #3A3A3A; border-bottom: solid 1px #2A2A2A; border-left: solid 1px #2A2A2A; border-right: solid 1px #2A2A2A;
+			}
+	.defblock2 td {background-color: #333; text-align: left; font-size: small; padding: 5px 10px; border: 0px;}
+	.defblock3 td {width: 50%; text-align: center; padding: 0px 10px;}
+	.battle1 th {font-size: x-small; padding: 3px 5px;}
+	.battle1 td {text-align: center; padding: 5px;}
+	.battle2 {width: 100%; text-align: left; padding: 0px 10px;}
+	.battle2 th {text-align: left; color: orange; font-size: large; padding: 5px 0px 0px 4px; border-top: solid 1px #1a1510}
+	.battle2 td {width: 50%;}
+	.defblock th{padding: 3px 5px; text-align: right !important; font-size: small;}
+	.defblock td{padding: 3px 5px; text-align: center !important; font-size: small; background-color: #333;}
+	
+/* ----- in battle ------ */
+	.display_spiritual_skill { color : #92e990;}
+	.display_pilot_skill {color : #58f;}
+	.display_weapon_skill {color : #f00;}
+	.display_item {color : #ff0;}
+
+/* ---- ranking page ---- */
+	.ranking_table th {background-color: #333;color: #fa0;}
+	.ranking_table td, .ranking_table .normal 
+		td {background-color: #666;}
+	.ranking_table .dead td, .ranking_table .dead td a {
+	    color: #888;
+	    background-color: #555;
+	}		
+	.ranking_table .out td {background-color: #222;}
+	.ranking_table .full td {background-color: #444;}
+	.ranking_table .self td {background-color: #9e4a21;}
+	.ranking_table .newby td {background-color: PaleVioletRed;}
+	.ranking_table .banned td {background-color: Maroon;}
+	
+/* Etc. */
+	.gainlist {border-bottom: 1px solid #aaaacc; text-align:center; padding-bottom: 5px}
+	.gainlist li{display: inline; font-size:small; padding: 0px 10px}
+	.loss {color: red; font-weight:bold;}
+	.center {text-align: center}
+	.right {text-align: right}
+	.left {text-align: left}
+	#pilotport {width:250px; float:left}
+	#pilotstat {padding-left: 5px; margin-left:250px; text-align:left}
+	
+	
+/* Title Page */
+#titlebg 
+	{
+	width: 775px; height: 387px; 
+	margin-top: 0px; 
+	margin-left: auto; margin-right: auto;
+	padding: auto;
+	background: black url('http://www.gt-forum.com/gt-dev/srwo/img/title.jpg') no-repeat; 
+	border: 1px solid black; text-align: right;
+	}
+#login 
+	{
+	width: 225px;
+	margin-left:auto; margin-right: 18px; margin-top: 180px;
+	padding: 5px;
+	padding-right: 10px;
+	border: 1px solid #001; 
+	background: #111;
+position: relative;
+z-index: 99;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;}
+#loginform {margin-right: -10px; margin-top: -10px; margin-bottom: -15px;}	
+#loginform td { width: 100%; text-align:right;}
+
+/* Title page buttons */
+#robots 
+	{
+	position: relative;
+	top: -1px; left: -1px; 
+	margin-left: -1px;
+	display: block;
+	width: 189px;
+	height: 63px;
+	background: transparent url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') 0px 0px no-repeat;
+	}
+	
+	#robots:hover
+		{
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') -190px 0px no-repeat;
+		}
+	#robots span {display: none;}
+
+
+#pilots 
+	{
+	position: absolute;
+	top: 388px; left: 189px; 
+	margin-left: 3px;
+	display: block;
+	width: 189px;
+	height: 63px;
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') 0 -63px no-repeat;
+	}
+#pilots:hover
+	{
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') -190px -63px no-repeat;
+	}
+#pilots span {display: none;}
+
+#skills 
+	{
+	position: absolute;
+	top: 388px; left: 389px; 
+	margin-left: 3px;
+	display: block;
+	width: 189px;
+	height: 63px;
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') 0px -126px no-repeat;
+	}
+#skills:hover
+	{
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') -190px -126px no-repeat;
+	}
+#skills span {display: none;}
+#forums 
+	{
+	position: absolute;
+	top: 388px; left: 585px; 
+	margin-left: 3px;
+	display: block;
+	width: 189px;
+	height: 63px;
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') 0 -189px no-repeat;
+	}
+#forums:hover
+	{
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') -189px -189px no-repeat;
+	}
+#forums span {display: none;}
+
+#overview	{
+	text-align: center;
+	position: relative;
+	margin-left: auto; margin-right: auto;
+	display: block;
+	width: 386px;
+	height: 49px;
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') 0 -272px no-repeat;
+	}
+#overview:hover
+	{
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/frontpagesprite.jpg') 0 -341px no-repeat;
+	}
+#overview span {display: none;}
+
+
+#titlefooter 
+	{
+	display:block;
+	padding-bottom: 0px; margin-bottom: 0px;
+	text-align:center;
+	width: 100%;
+	background: url('http://www.gt-forum.com/gt-dev/srwo/img/opocbg.jpg') repeat-x;
+	}
+#titlefooter span {display: none;}
+
+
+#announce
+	{
+	width: 768px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+        border-bottom: 1px solid #224;
+ padding-bottom: -15px;
+ margin-bottom: 5px;
+ margin-top: 5px;
+ color: #ffa;
+	}
+
+#facebook
+	{
+	width: 775px;
+	margin-left:auto;
+	margin-right:auto;
+        margin-bottom: 0px;
+        padding-left:7px;
+	}
+	
